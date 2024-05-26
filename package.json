@@ -1,0 +1,35 @@
+{
+  "name": "fooddeliveryapp",
+  "version": "1.0.0",
+  "description": "This is Food Delivery App",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishnaPuranik/FoodDeliveryApp.git"
+  },
+  "keywords": [
+    "Food",
+    "Krishna"
+  ],
+  "author": "Krishna Moorthi Puranik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KrishnaPuranik/FoodDeliveryApp/issues"
+  },
+  "homepage": "https://github.com/KrishnaPuranik/FoodDeliveryApp#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ]
+}

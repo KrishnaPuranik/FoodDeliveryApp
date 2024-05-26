@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 // const reactHeading = React.createElement('h1', {id:"Heading"}, "Hello World from React!");
 // 'parent' is not HTML element, its react object. DOM will create html tag.
 const parent = React.createElement(
