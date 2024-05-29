@@ -1,16 +1,58 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// const reactHeading = React.createElement('h1', {id:"Heading"}, "Hello World from React!");
-// 'parent' is not HTML element, its react object. DOM will create html tag.
-const parent = React.createElement(
-    'div', 
-    {id: 'parent'}, 
-    React.createElement(
-        'div', 
-        {id: 'child'}, 
-        [React.createElement('h1', {}, "I'm an h1 tag"), React.createElement('h2', {}, "I'm an h2 tag")]
+
+// React.createElement => object => HTMLElement(render)
+
+const heading = React.createElement("h1", {id: "heading"}, "Food Delivery App");
+console.log(heading);
+// JSX heading
+const jsxHeading = <div>
+    <h1 id='heading'>Food Delivery App using jsx</h1>
+    <h2 id='heading'>Food Delivery App using jsx</h2>
+</div>;
+console.log(jsxHeading);
+
+
+const HeadingComponent = () => {
+    return <h1 className='heading'>Krishna</h1>
+}
+
+// Shorter format of above
+const HeadingComponent2 = () => <h1 className='heading'>Moorthi</h1>;
+
+// One more format
+// React Functional Component
+const HeadingComponent3 = () => {
+    return (
+    <>
+        {HeadingComponent2()}
+        { <HeadingComponent2 /> }
+        <h1 className='heading'>Moorthi</h1>
+    </>
+    );
+}
+
+// React Element
+const heading1 = (
+    <h1 id='heading'>Food Delivery App using jsx</h1>
+)
+
+// React component composition - Its component inside a component
+const HeadingComponent4 = () => {
+    return (
+    <div id=''>
+        { <HeadingComponent /> }
+        { <HeadingComponent2 /> }
+        { <HeadingComponent3 /> }
+        <h1 id='heading'>Food Delivery App using jsx</h1>
+    </div>
     )
-);
-console.log(parent);
-const reactRoot = ReactDOM.createRoot(document.getElementById('root'));
-reactRoot.render(parent);
+}
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+// Rendering React element
+// root.render(heading1);
+
+// Rendering React Component
+root.render(<HeadingComponent4 />);
