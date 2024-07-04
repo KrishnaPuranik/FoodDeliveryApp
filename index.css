@@ -54,3 +54,8 @@ h2 {
 .res-logo {
     width: 100%;
 }
+
+.filter-btn {
+    margin-top: 10px;
+    cursor: pointer;
+}
